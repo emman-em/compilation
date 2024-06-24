@@ -1,0 +1,237 @@
+<head>
+<title>MENU</title>
+<h1>Restaurant</h1>
+
+</head>
+<body class="">
+    <link rel="stylesheet" href="style3.css">
+    <div class="container">
+        <div class="navbar">
+            <a href="#maindish" class="nav-link">Main Dish</a>
+            <a href="#vegetables" class="nav-link">Vegetables</a>
+            <a href="#desserts" class="nav-link">Desserts</a>
+            <a href="#drinks" class="nav-link">Drinks</a>
+            <a href="#addons" class="nav-link">Add ons</a>
+          </div>
+
+          <div id="maindish" style=" height: 800px; background-color: #f0f0f0;">
+            <div class="Maindish">
+                <img src = "adobo.jpeg">
+                <div class="desc">Adobo....100php</div>
+                <button class="addtocart" data-product-index="0">Add to cart</button>
+            </div>
+            <div class="Maindish">
+                <img src = "sinigang.jpeg">
+                <div class="desc">Sinigang....200php</div>
+                <button class="addtocart" data-product-index="1">Add to cart</button>
+            </div>
+            <div class="Maindish">
+                <img src = "sisig.jpeg">
+                <div class="desc">Sisig....50php</div>
+                <button class="addtocart" data-product-index="2">Add to cart</button>
+            </div>
+            <div class="Maindish">
+                <img src = "kaldereta.jpeg">
+                <div class="desc">Kaldereta....300php</div>
+                <button class="addtocart" data-product-index="3">Add to cart</button>
+            </div>
+            <div class="Maindish">
+                <img src = "pancit.jpeg">
+                <div class="desc">Pancit....120php</div>
+                <button class="addtocart" data-product-index="4">Add to cart</button>
+            </div>
+          </div>
+          
+          
+          <div id="vegetables" style="height: 800px; background-color: #e0e0e0;">
+          <div class="Vegetables">
+                    <img src ="salad.jpeg">
+                    <div class="desc">Salad....70php</div>
+                    <button class="addtocart" data-product-index="5">Add to cart</button>
+                </div>
+                <div class="Vegetables">
+                    <img src ="broccolisalad.jpeg">
+                    <div class="desc">Broccolisalad....70php</div>
+                    <button class="addtocart" data-product-index="6">Add to cart</button>
+                </div>
+                <div class="Vegetables">
+                    <img src ="tomatosalad.jpeg">
+                    <div class="desc">Tomatosalad....70php</div>
+                    <button class="addtocart" data-product-index="7">Add to cart</button>
+                </div>
+            </div>
+        
+          <div id="desserts" style="height: 800px; background-color: #d0d0d0;">
+            <div class="Dessert">
+                <img src ="icecream.jpeg">
+                <div class="desc">Ice Cream....10php</div>
+                <button class="addtocart" data-product-index="8">Add to cart</button>
+            </div>
+            <div class="Dessert">
+                <img src ="lecheflan.jpeg">
+                <div class="desc">Leche Flan....30php</div>
+                <button class="addtocart" data-product-index="9">Add to cart</button>
+            </div>
+            <div class="Dessert">
+                <img src ="cookies.jpeg">
+                <div class="desc">Cookies....20php</div>
+                <button class="addtocart" data-product-index="10">Add to cart</button>
+            </div>
+        
+            </div>
+          
+          <div id="drinks" style="height: 800px; background-color: #c0c0c0;">
+            <div class="Drinks">
+                <img src ="manggojuice.jpeg">
+                <div class="desc">Manggo Juice....20php</div>
+                <button class="addtocart" data-product-index="11">Add to cart</button>
+            </div>
+            <div class="Drinks">
+                <img src ="strawberryjuice.jpeg">
+                <div class="desc">StrawBerry Juice....50php</div>
+                <button class="addtocart" data-product-index="12">Add to cart</button>
+            </div>
+            <div class="Drinks">
+                <img src ="orangejuice.jpg">
+                <div class="desc">Orange Juice....30php</div>
+                <button class="addtocart" data-product-index="13">Add to cart</button>
+            </div>
+        </div>
+        
+          <div id="addons" style="height: 800px; background-color: #b0b0b0;">
+            <div class="AddOns">
+                <img src ="chips.jpeg">
+                <div class="desc">Chips....15php</div>
+                <button class="addtocart" data-product-index="14">Add to cart</button>
+            </div>
+            <div class="AddOns">
+                <img src ="soup.jpeg">
+                <div class="desc">Soup....5php</div>
+                <button class="addtocart" data-product-index="15">Add to cart</button>
+            </div>
+            <div class="AddOns">
+                <img src ="rice.jpeg">
+                <div class="desc">Rice....10php</div>
+                <button class="addtocart" data-product-index="16">Add to cart</button>
+            </div>
+
+            <div id="sidebarcart">
+                <h3 style="color:#f5d144;">Receipt</h3>
+                <div id="cartitems"></div>
+				<p></p>
+                <p>----------------------------------------------</p>
+                <p >Total Quantity: <span id="totalQuantity">0</span></p>
+                <p >Total Price: <span id="totalPrice">0</span></p>
+                <button class="btn clearCartBtn">Clear Cart</button>
+                <button class="btn closeCartBtn">Close</button>
+            </div>
+        </div>
+
+<script>
+    var products = [
+        { name: "Adobo", price: 100 },
+        { name: "sinigang", price: 200 },
+        { name: "Sisig", price: 50},
+        { name: "Kaldereta", price: 300 },
+        { name: "Pancit", price: 120 },
+        { name: "Salad ", price: 70 },
+        { name: "Broccoli Salad ", price: 70 },
+        { name: "Tomatosalad", price: 70 },
+        { name: "Ice Cream", price: 10 },
+        { name: "Leche Flan ", price: 30 },
+        { name: "Cookies ", price: 20 },
+        { name: "Manggo Juice", price: 20 },
+        { name: "StrawBerry Juice", price: 50 },
+        { name: "Orange Juice", price: 30 },
+        { name: "Chips", price: 15 },
+        { name: "Soup", price: 5 },
+        { name: "Rice", price: 10 }
+    ];
+
+    var cart = [];
+
+    function addToCart(productIndex) {
+        var product = products[productIndex];
+        var existingCartItem = cart.find(item => item.productIndex === productIndex);
+
+        if (existingCartItem) {
+            existingCartItem.quantity++;
+        } else {
+            cart.push({ ...product, productIndex: productIndex, quantity: 1 });
+        }
+
+        updateCartDisplay();
+
+        alert("Your order is added to cart!");
+        showSidebarCart();
+    }
+
+    function updateCartDisplay() {
+        var cartItemsDiv = document.getElementById("cartitems");
+        var totalQuantity = 0;
+        var totalPrice = 0;
+
+        cartItemsDiv.innerHTML = '';
+
+        cart.forEach(function(item) {
+            var cartItem = document.createElement("div");
+            cartItem.className = "cartitem";
+            cartItem.textContent = `${products[item.productIndex].name} - $${products[item.productIndex].price} x ${item.quantity}`;
+
+            var increaseBtn = document.createElement("button");
+            increaseBtn.className = "btn quantity-btn";
+            increaseBtn.textContent = "+";
+            increaseBtn.addEventListener("click", function() {
+                item.quantity++;
+                updateCartDisplay();
+            });
+
+            var decreaseBtn = document.createElement("button");
+            decreaseBtn.className = "btn quantity-btn";
+            decreaseBtn.textContent = "-";
+            decreaseBtn.addEventListener("click", function() {
+                if (item.quantity > 1) {
+                    item.quantity--;
+                    updateCartDisplay();
+                }
+            });
+
+            cartItem.appendChild(decreaseBtn);
+            cartItem.appendChild(increaseBtn);
+
+            cartItemsDiv.appendChild(cartItem);
+
+            totalQuantity += item.quantity;
+            totalPrice += products[item.productIndex].price * item.quantity;
+        });
+
+        document.getElementById("totalQuantity").textContent = totalQuantity;
+        document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+    }
+
+    function clearCart() {
+        cart = [];
+        updateCartDisplay();
+    }
+
+    function showSidebarCart() {
+        document.getElementById("sidebarcart").style.display = "block";
+    }
+
+    function hideSidebarCart() {
+        document.getElementById("sidebarcart").style.display = "none";
+    }
+
+    var addToCartButtons = document.querySelectorAll(".addtocart");
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var productIndex = parseInt(button.getAttribute("data-product-index"));
+            addToCart(productIndex);
+        });
+    });
+    document.querySelector(".clearCartBtn").addEventListener("click", clearCart);
+    document.querySelector(".closeCartBtn").addEventListener("click", hideSidebarCart);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.img_tgylgo{
+	float: left;
+	width: 9%;
+}
+.img_cctlgo{
+	float: right;
+	width: 9%;
+}
+p{
+	text-align: center;
+}
+h1{
+	text-align: center;
+}
+.leftss{
+	float: left;
+}
+p{
+	color: maroon;
+	margin: 4px;
+}
+h1{
+	color: maroon;
+	margin: 10px;
+}
+.th1{
+	background-color: maroon;
+	color: white;
+	font-family: "Arial";
+}
+.th2{
+	background-color: maroon;
+	color: white;
+	font-family: "Arial";
+}
+td{
+	text-align: center;
+	font-family: "Arial";
+}
+.martxt{
+	color: maroon;
+	text-align: left;
+	font-family: "Arial";
+}
+.tdyllw{
+	background-color: yellow;
+	color: maroon;
+	text-align: left;
+	font-family: "Arial";
+}
+.tdyllw1{
+	background-color: yellow;
+	font-family: "Arial";
+}
+.marmdll{
+	text-align: center;
+	color: maroon;
+	font-family: "Arial";
+}
+.martxt2{
+	text-align: center;
+	color: maroon;
+}
+.tdlft{
+	text-align: left;
+	font-family: Arial;
+}
+.clg{
+	color: maroon;
+}
+.csh{
+	color: maroon;
+	text-align: right;
+}

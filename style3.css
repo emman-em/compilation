@@ -1,0 +1,224 @@
+h1{
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    color: #2d9596;
+    width: 10px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #40679E;
+    font-family: "Roboto", sans-serif;
+    border-radius: 8px;
+  }
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover{
+    background-color: #124076;
+}
+.Maindish{
+    margin: 7px;
+    box-shadow: 5px 5px 20px black;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+    
+}
+.Maindish img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.Vegetables{
+    margin: 5px;
+    box-shadow: 5px 5px 20px black;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+}
+.Vegetables img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.Drinks{
+    margin: 5px;
+    box-shadow: 5px 5px 20px black;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+}
+.Drinks img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.Dessert{
+    margin: 5px;
+    box-shadow: 5px 5px 20px black;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+}
+.Dessert img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.AddOns{
+    margin: 5px;
+    box-shadow: 5px 5px 20px black;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+}
+.AddOns img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #003c43;
+}
+.button {
+  top: 2;
+    position: relative;
+    background-color: rgb(34, 86, 230);
+    border-radius: 5px;
+    box-shadow: rgb(18, 83, 121) 0px 4px 0px 0px;
+    padding: 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: "";
+    background-color: rgb(2, 176, 101);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  .button:hover::before {
+    width: 100%;
+  }
+  .total{
+    font-family: "Roboto", sans-serif;
+  }
+  .addtocart {
+    bottom: 1;
+    float: left;
+    position: relative;
+    background-color: rgb(34, 86, 230);
+    border-radius: 5px;
+    box-shadow: rgb(18, 83, 121) 0px 4px 0px 0px;
+    padding: 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .addtocart::before {
+    content: "";
+    background-color: rgb(2, 176, 101);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  .addtocart:hover::before {
+    width: 100%;
+  }
+
+  .spam {
+    text-align: center;
+    float: right;
+    background-color: #f5d144;
+    border-radius: 5px;
+    box-shadow: rgb(18, 83, 121) 0px 4px 0px 0px;
+    padding: 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+  }
+
+  .cartitem {
+    margin-bottom: 10px;
+}
+.quantity-btn {
+    margin-right: 5px;
+}
+
+#sidebarcart {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  border-radius: 20px;
+  color: #eee;
+  font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    background-color: #8f85a5;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+}
+.btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5d144;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #e13636;
+}

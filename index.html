@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Project</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2196F3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .dashboard-card {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      padding: 15px;
+      width: 300px;
+      cursor: pointer; 
+    }
+    .dashboard-card:hover {
+      background-color: #e0e0e0;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 70px); 
+      border: none;
+    }
+    .back-button {
+      display: none;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 10px 15px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Complilation</h1>
+  </header>
+  <div class="dashboard">
+    <div class="dashboard-card" onclick="loadContent('path1.html')">
+      <h2>COR</h2>
+    </div>
+    <div class="dashboard-card" onclick="loadContent('path2.html')">
+      <h2>Sari-Sari Store</h2>
+    </div>
+    <div class="dashboard-card" onclick="loadContent('path3.html')">
+      <h2>Restaurant</h2>
+    </div>
+    <div class="dashboard-card" onclick="loadContent('resume.html')">
+      <h2>Resume</h2>
+    </div>
+  </div>
+  <iframe id="contentFrame" src="" frameborder="0"></iframe>
+  <button class="back-button" onclick="goBack()">Back</button>
+
+  <script>
+    function loadContent(url) {
+      document.querySelector('.dashboard').style.display = 'none'; 
+      document.getElementById('contentFrame').src = url;
+      document.querySelector('.back-button').style.display = 'block'; 
+    }
+
+    function goBack() {
+      document.querySelector('.dashboard').style.display = 'flex'; 
+      document.getElementById('contentFrame').src = '';
+      document.querySelector('.back-button').style.display = 'none'; 
+    }
+  </script>
+</body>
+</html>

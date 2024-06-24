@@ -1,0 +1,300 @@
+<head>
+<title>MENU</title>
+<h1>Em Store</h1>
+
+</head>
+<body class="">
+    <link rel="stylesheet" href="style2.css">
+    <div class="container">
+        <div class="navbar">
+            <a href="#Jns" class="nav-link">Jeans</a>
+            <a href="#prfm" class="nav-link">Perfume</a>
+            <a href="#shrt" class="nav-link">T-Shirts</a>
+            <a href="#snd" class="nav-link">Sando</a>
+            <a href="#tys" class="nav-link">Toys</a>
+            <button onclick="openRestockWindow('')">Restock</button>
+          </div>
+
+          <div id="jns" style=" height: 800px; background-color: #f0f0f0;">
+            <div class="JEANS">
+                <img src = "jeans.jpeg">
+                <div class="desc">jeans....100php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="0">Add to cart</button>
+            </div>
+            <div class="JEANS">
+                <img src = "Jeans2.jpeg">
+                <div class="desc">jeans....200php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="1">Add to cart</button>
+            </div>
+            <div class="JEANS">
+                <img src = "Jeans3.jpeg">
+                <div class="desc">jeans....50php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="2">Add to cart</button>
+            </div>
+            <div class="JEANS">
+                <img src = "Jeans4.jpeg">
+                <div class="desc">jeans....300php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="3">Add to cart</button>
+            </div>
+           
+          </div>
+          
+          
+          <div id="prfm" style="height: 800px; background-color: #e0e0e0;">
+          <div class="PERFUME">
+                    <img src ="Perfume.jpeg">
+                    <div class="desc">Perfume....70php       <br>stocks: </div>
+                    <button class="addtocart" data-product-index="5">Add to cart</button>
+                </div>
+                <div class="PERFUME">
+                    <img src ="perfume2.jpeg">
+                    <div class="desc">Perfume....70php       <br>stocks: </div>
+                    <button class="addtocart" data-product-index="6">Add to cart</button>
+                </div>
+                <div class="PERFUME">
+                    <img src ="perfume3.jpeg">
+                    <div class="desc">Perfume....70php       <br>stocks: </div>
+                    <button class="addtocart" data-product-index="7">Add to cart</button>
+                </div>
+                <div class="PERFUME">
+                    <img src ="perfum4.jpeg">
+                    <div class="desc">Perfume....70php       <br>stocks: </div>
+                    <button class="addtocart" data-product-index="7">Add to cart</button>
+                </div>
+            </div>
+        
+          <div id="shrt" style="height: 800px; background-color: #d0d0d0;">
+            <div class="SHIRT">
+                <img src ="Tshirt.jpeg">
+                <div class="desc">Ice Cream....10php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="8">Add to cart</button>
+            </div>
+            <div class="SHIRT">
+                <img src ="Tshirt2.jpeg">
+                <div class="desc">Leche Flan....30php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="9">Add to cart</button>
+            </div>
+            <div class="SHIRT">
+                <img src ="Tshirt3.jpeg">
+                <div class="desc">Cookies....20php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="10">Add to cart</button>
+            </div>
+            <div class="SHIRT">
+                <img src ="Tshirt4.jpeg">
+                <div class="desc">Cookies....20php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="10">Add to cart</button>
+            </div> 
+            </div>
+          
+          <div id="snd" style="height: 800px; background-color: #c0c0c0;">
+            <div class="SANDO">
+                <img src ="Sando.jpeg">
+                <div class="desc">Manggo Juice....20php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="11">Add to cart</button>
+            </div>
+        </div>
+        
+          <div id="tys" style="height: 800px; background-color: #b0b0b0;">
+            <div class="TOYS">
+                <img src ="toys.jpeg">
+                <div class="desc">Chips....15php       <br>stocks: </div>
+                <button class="addtocart" data-product-index="14">Add to cart</button>
+            </div>
+            
+
+            <div id="sidebarcart">
+                <h3 style="color:#f5d144;">Receipt</h3>
+                <div id="cartitems"></div>
+                <p>----------------------------------------------</p>
+                <p >Total Quantity: <span id="totalQuantity">0</span></p>
+                <p >Total Price: <span id="totalPrice">0</span></p>
+                <button class="btn clearCartBtn">Clear Cart</button>
+                <button class="btn closeCartBtn">Close</button>
+                <div>
+        	<input type="radio" id="studentRadio" name="discountType" value="student">
+       	 	<label for="studentRadio">Student (10% discount)</label><br>
+        	<input type="radio" id="seniorRadio" name="discountType" value="senior">
+        	<label for="seniorRadio">Senior (20% discount)</label><br>
+        	<input type="radio" id="pwdRadio" name="discountType" value="pwd">
+        	<label for="pwdRadio">PWD (30% discount)</label><br>
+        	<input type="radio">
+        	<label>None</label>
+    		</div>
+    		<p>----------------------------------------------</p>
+    		<button class="btn paymentBtn" onclick="Payment()">Enter Payment</button>
+</div>
+
+        </div>
+
+<script>
+    var products = [
+        { name: "Jeans", price: 100 },
+        { name: "Jeans", price: 200 },
+        { name: "Jeans", price: 50},
+        { name: "Jeans", price: 300 },
+        { name: "Perfume", price: 120 },
+        { name: "Perfume", price: 70 },
+        { name: "Perfume ", price: 70 },
+        { name: "Perfume", price: 70 },
+        { name: "T-shirt", price: 10 },
+        { name: "T-shirt ", price: 30 },
+        { name: "T-shirt ", price: 20 },
+        { name: "T-shirt", price: 20 },
+        { name: "Sando", price: 50 },
+        { name: "Sando", price: 30 },
+        { name: "Toys", price: 15 },
+        { name: "Toys", price: 5 },
+        { name: "Toys", price: 10 }
+    ];
+
+    var cart = [];
+
+    function addToCart(productIndex) {
+        var product = products[productIndex];
+        var existingCartItem = cart.find(item => item.productIndex === productIndex);
+
+        if (existingCartItem) {
+            existingCartItem.quantity++;
+        } else {
+            cart.push({ ...product, productIndex: productIndex, quantity: 1 });
+        }
+
+        updateCartDisplay();
+
+        alert("Your order is added to cart!");
+        showSidebarCart();
+    }
+
+    function updateCartDisplay() {
+        var cartItemsDiv = document.getElementById("cartitems");
+        var totalQuantity = 0;
+        var totalPrice = 0;
+
+        cartItemsDiv.innerHTML = '';
+
+        cart.forEach(function(item) {
+            var cartItem = document.createElement("div");
+            cartItem.className = "cartitem";
+            cartItem.textContent = `${products[item.productIndex].name} - $${products[item.productIndex].price} x ${item.quantity}`;
+
+            var increaseBtn = document.createElement("button");
+            increaseBtn.className = "btn quantity-btn";
+            increaseBtn.textContent = "+";
+            increaseBtn.addEventListener("click", function() {
+                item.quantity++;
+                updateCartDisplay();
+            });
+
+            var decreaseBtn = document.createElement("button");
+            decreaseBtn.className = "btn quantity-btn";
+            decreaseBtn.textContent = "-";
+            decreaseBtn.addEventListener("click", function() {
+                if (item.quantity > 1) {
+                    item.quantity--;
+                    updateCartDisplay();
+                }
+            });
+
+            cartItem.appendChild(decreaseBtn);
+            cartItem.appendChild(increaseBtn);
+
+            cartItemsDiv.appendChild(cartItem);
+
+            totalQuantity += item.quantity;
+            totalPrice += products[item.productIndex].price * item.quantity;
+        });
+
+        document.getElementById("totalQuantity").textContent = totalQuantity;
+        document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+    }
+
+    function clearCart() {
+        cart = [];
+        updateCartDisplay();
+    }
+
+    function showSidebarCart() {
+        document.getElementById("sidebarcart").style.display = "block";
+    }
+
+    function hideSidebarCart() {
+        document.getElementById("sidebarcart").style.display = "none";
+    }
+
+    var addToCartButtons = document.querySelectorAll(".addtocart");
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var productIndex = parseInt(button.getAttribute("data-product-index"));
+            addToCart(productIndex);
+        });
+    });
+    document.querySelector(".clearCartBtn").addEventListener("click", clearCart);
+    document.querySelector(".closeCartBtn").addEventListener("click", hideSidebarCart);
+
+
+    function calculateDiscount() {
+        var total = parseFloat(document.getElementById("totalPrice").innerText);
+        var discount = 0;
+
+        var studentRadio = document.getElementById("studentRadio");
+        var seniorRadio = document.getElementById("seniorRadio");
+        var pwdRadio = document.getElementById("pwdRadio");
+
+        if (studentRadio.checked) {
+            discount = total * 0.10; 
+        } else if (seniorRadio.checked) {
+            discount = total * 0.20; 
+        } else if (pwdRadio.checked) {
+            discount = total * 0.30; 
+        }
+
+        return discount;
+    }
+
+
+    function calculateDiscount() {
+        var total = parseFloat(document.getElementById("totalPrice").innerText);
+        var discount = 0;
+
+        var studentRadio = document.getElementById("studentRadio");
+        var seniorRadio = document.getElementById("seniorRadio");
+        var pwdRadio = document.getElementById("pwdRadio");
+
+        if (studentRadio.checked) {
+            discount = total * 0.10; 
+        } else if (seniorRadio.checked) {
+            discount = total * 0.20; 
+        } else if (pwdRadio.checked) {
+            discount = total * 0.30; 
+        }
+
+        return discount;
+    }
+
+
+    function calculatePayment() {
+        var total = parseFloat(document.getElementById("totalPrice").innerText);
+        var discount = calculateDiscount();
+        return total - discount;
+    }
+
+
+    function Payment() {
+        var payment = calculatePayment();
+        var enteredPayment = parseFloat(prompt("Enter the payment amount:"));
+        if (enteredPayment >= payment) {
+            var change = enteredPayment - payment;
+            alert("Your change is: " + change.toFixed(2));
+        } else {
+            alert("Insufficient payment.");
+        }
+    }
+
+function openRestockWindow(item) {
+        window.open(`restocks.html?item=${item}`, '_blank', 'width=700,height=470');
+    }
+
+
+  </script>
+</body>
+</html>
